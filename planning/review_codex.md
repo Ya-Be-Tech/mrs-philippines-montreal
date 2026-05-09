@@ -1,115 +1,115 @@
-# Review of `planning/plan.md`
+# Updated Review of `planning/plan.md`
 
-## Overall Opinion
+## Overall Assessment
 
-The plan is a solid direction for the Mrs Philippines Montreal website. It identifies the right core goals: a polished cultural/community site, strong mobile experience, multilingual support, event archives, a talent page, and a premium gold-and-black visual identity.
+The plan is much stronger now. It has moved from an over-broad full-stack plan to a focused static MVP, which fits this project better. Removing the contact/backend scope and standardizing on Nuxt static generation plus Firebase Hosting is the right call for a community event website whose current needs are mostly content, images, galleries, video embeds, and multilingual presentation.
 
-The plan is strongest as a vision document. Before it becomes an implementation plan, it needs more detail around scope, deployment mode, content readiness, accessibility, and what should be deferred until requirements are confirmed.
+The plan now aligns well with the current project setup: Nuxt 3, Tailwind CSS, `@nuxtjs/i18n`, TypeScript, and the `tl` locale code are all reflected in the repo configuration.
 
-## What Looks Good
+## What Improved
 
-- The page structure is sensible: Home, About, archives, Talent, Contact, and multilingual support.
-- Nuxt 3, Tailwind CSS, TypeScript, and `@nuxtjs/i18n` are appropriate choices for this project.
-- The gold-and-black theme matches the event branding and existing theme direction.
-- The plan correctly calls out SEO, mobile-first design, galleries, and language switching as important.
-- Testing language switching and form submission is the right instinct for the highest-risk user flows.
+- The scope is now clearly labeled as **Phase 1 - Static MVP**.
+- Backend and Cloud Run have been removed from the initial release, which reduces complexity.
+- Deployment is now clear: `nuxt generate` followed by Firebase Hosting.
+- The Tagalog/Filipino locale has been corrected from `tg` to `tl`.
+- Accessibility is no longer treated only as translation; the plan now includes contrast, keyboard navigation, media labels, and touch target criteria.
+- The testing plan is more practical and focused on build stability, i18n, carousel controls, and responsive embeds.
 
-## Concerns
+## Remaining Findings
 
-### 1. Scope Is Too Broad for a First Release
+### 1. Content Inventory Still Needs to Be Explicit
 
-The plan includes a full multilingual site, event archives, galleries, contestant profiles, backend contact handling, testing, CI/CD, Firebase Hosting, and Cloud Run. That is a lot for the first pass.
+The biggest remaining risk is still content readiness. The plan should add a concrete inventory step before page implementation.
 
-I would split this into phases:
+Recommended checklist:
 
-1. Build the static public site structure and visual theme.
-2. Add the main content pages and galleries.
-3. Add i18n once English copy is stable.
-4. Add contact/backend functionality only after the contact requirement is confirmed.
-5. Add deployment automation and broader tests after the site shape is stable.
+- Confirm final English copy for each page.
+- Confirm who will review French and Tagalog/Filipino translations.
+- Confirm official 2026 event date for any countdown or event messaging.
+- Map each 2019 and 2022 photo to the correct contestant/event section.
+- Confirm names, titles, years, and spellings for winners and contestants.
+- Confirm image and video usage permissions.
 
-### 2. Backend Should Be a Decision Point
+### 2. "Full Site Translation" May Be Too Much for Phase 1
 
-The plan assumes a Node.js backend on Cloud Run for form handling. That may be unnecessary. If the contact page is still undecided, the plan should not commit to Fastify/Express and Cloud Run yet.
+The plan says full site translation in EN, FR, and TL. That is a good goal, but it can block launch if translations are not ready.
 
-For this site, a static Nuxt deployment is likely enough at first. Contact could later be handled with a mail link, hosted form, Firebase Function, or Cloud Run service depending on what the customer actually wants.
+I would phrase Phase 1 as:
 
-### 3. Deployment Needs Clarification
+- i18n infrastructure included.
+- English content complete first.
+- French and Tagalog/Filipino translations added as content becomes approved.
 
-The plan mentions Nuxt as SPA/SSR and also says Firebase Hosting will serve the frontend. Firebase Hosting is excellent for static generated Nuxt output, but SSR needs a server runtime.
+That keeps the site build moving without lowering the multilingual goal.
 
-The plan should explicitly choose the first deployment target. My recommendation is:
+### 3. Facebook Video Embeds Need a Fallback Plan
 
-- Use `nuxt generate` for a static site.
-- Deploy the generated site to Firebase Hosting.
-- Add Cloud Run only if a real backend/API is needed later.
+The plan mentions YouTube/Facebook video embeds. YouTube embeds are usually straightforward. Facebook embeds can be more fragile, slower, and less predictable on mobile or privacy-restricted browsers.
 
-### 4. i18n Details Need Correction
+For the home hero/background, I would avoid depending on a Facebook iframe as the primary visual. Use a locally optimized image or video asset where possible, and keep Facebook as a secondary embed or source reference.
 
-The plan says EN, FR, and TG. In `nuxt.config.ts`, the locale code is currently `tg` for Tagalog. That is risky because `tg` usually means Tajik. Tagalog is commonly represented as `tl`, and Filipino may be represented as `fil`.
+### 4. Static Hosting and Dynamic Features Should Stay Clearly Separated
 
-Before content work begins, decide whether the language should be labeled Tagalog or Filipino, then use the correct locale code consistently.
+The plan correctly removes backend scope. Keep that boundary strict during implementation.
 
-The plan should also specify:
+Avoid adding features that quietly require server behavior, such as:
 
-- Browser-language detection behavior.
-- English fallback when the browser language is unsupported.
-- A visible manual language switcher.
-- Whether translated routes are required or only translated page content.
+- Custom form submission.
+- Voting.
+- Login/admin editing.
+- Server-rendered private data.
+- Runtime image processing.
 
-### 5. Content Readiness Is the Biggest Risk
+If any of those become required later, they should be added as a new phase with a separate architecture decision.
 
-The site depends on real names, dates, contestant profiles, event history, images, winner details, and translations. The plan should include a content inventory before implementation.
+### 5. SEO Plan Needs Specific Page Requirements
 
-Recommended content checklist:
+"Metadata and schema markup" is a good target, but the plan should specify the minimum SEO requirements per page.
 
-- Confirm official event date and countdown target for 2026.
-- Confirm all page copy in English.
-- Confirm translations or translation review process.
-- Confirm which 2019 and 2022 photos belong to which contestants.
-- Confirm image usage permission.
-- Confirm YouTube/Facebook embed usage and fallback content.
+Suggested baseline:
 
-### 6. Accessibility Needs Real Acceptance Criteria
+- Unique title and meta description for every page.
+- Open Graph image and sharing metadata.
+- Canonical URLs.
+- Event schema only if the 2026 event details are confirmed.
+- Organization schema only if official organization details are confirmed.
 
-The plan lists accessibility as language support, but accessibility is broader than translation. The gold-on-black theme can work, but it needs careful contrast checks.
+### 6. Gallery Requirements Need More Detail
 
-Add acceptance criteria for:
+"Interactive galleries" is still vague. The plan should define what the galleries must do.
 
-- Text contrast.
-- Keyboard navigation.
-- Alt text for all meaningful images.
-- Labels and validation messages for forms.
-- Reduced-motion behavior for carousels and transitions.
-- Mobile tap target sizes.
+Recommended decisions:
 
-### 7. Testing Plan Is Too Generic
+- Carousel or grid per page/section.
+- Whether images open in a lightbox.
+- Whether captions are required.
+- How contestant profiles connect to images.
+- How galleries behave on mobile.
+- Whether images should be lazy-loaded.
 
-The TDD section is reasonable but broad. This project does not need heavy unit testing at the start unless there is real business logic.
+### 7. Testing Tools Are Listed but Not Installed Yet
 
-Better initial test targets:
+The plan lists Vitest, Playwright, ESLint, and Prettier, but the current `package.json` does not include those packages. That is fine, but the plan should identify them as setup tasks.
 
-- Site builds successfully.
-- Main pages render.
-- Language switcher works.
-- Gallery/carousel controls work.
-- YouTube embed renders with fallback.
-- Contact form validation works, if a form is built.
+For Phase 1, I would prioritize:
 
-## Recommended MVP
+- `npm run generate`
+- A basic lint/format setup
+- A small Playwright smoke test only after routes exist
 
-For the first useful release, I would build:
+Vitest can wait unless the project gains reusable logic worth unit testing.
 
-- Home page with 2022 Queen visual treatment and event message.
-- About page using the existing history material.
-- 2022 Queen carousel.
-- Talent page with the confirmed YouTube video.
-- Archive landing sections for 2019 and 2022.
-- Basic i18n structure, with English content first.
-- Static Firebase Hosting deployment instructions.
+## Suggested Next Implementation Order
 
-I would defer custom backend, Cloud Run, CI/CD, and full multilingual polish until the customer confirms the remaining content and contact requirements.
+1. Confirm content inventory and image mapping.
+2. Build shared layout, navigation, footer, theme tokens, and responsive structure.
+3. Implement i18n routing and language switcher using `en`, `fr`, and `tl`.
+4. Build Home, About, Talent, and Archive pages in English.
+5. Add galleries/carousels with optimized local assets.
+6. Add translations once English copy is stable.
+7. Add SEO metadata and accessibility pass.
+8. Generate and deploy static output to Firebase Hosting.
 
 ## Bottom Line
 
-The plan is directionally good and uses the right stack, but it should be made more phased and more concrete. The best path is to launch a strong static Nuxt site first, organize the content and images carefully, fix the language-code decision, and only add backend infrastructure when a real dynamic requirement exists.
+The revised plan is now technically coherent and much more realistic. The static MVP approach is the right foundation. The remaining work is mostly about making content, gallery behavior, translation workflow, and SEO acceptance criteria more concrete before implementation starts.

@@ -16,5 +16,16 @@ export default defineNuxtConfig({
       cookieKey: 'i18n_redirected',
       redirectOn: 'root'
     }
-  }
+  },
+  nitro: {
+    preset: 'static',
+    prerender: {
+      crawlLinks: true,
+      routes: [
+        '/', '/about', '/talent', '/events/2019', '/events/2022',
+        '/fr/', '/fr/about', '/fr/talent', '/fr/events/2019', '/fr/events/2022',
+        '/tl/', '/tl/about', '/tl/talent', '/tl/events/2019', '/tl/events/2022',
+      ],
+    },
+  },
 })

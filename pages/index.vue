@@ -1,7 +1,7 @@
 <template>
   <div class="relative min-h-screen flex items-center justify-center overflow-hidden">
     <div class="absolute inset-0 z-0">
-      <div class="w-full h-full opacity-40 bg-black"></div>
+      <div class="w-full h-full opacity-40 bg-black" />
       <iframe 
         src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1935227787165392%2F&show_text=false&width=267&t=0" 
         class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200%] h-[200%] md:w-[120%] md:h-[120%] pointer-events-none"
@@ -10,7 +10,7 @@
         frameborder="0" 
         allowfullscreen="true" 
         allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-      ></iframe>
+      />
     </div>
 
     <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
@@ -24,7 +24,10 @@
         {{ $t('home_subtitle_2') }}
       </p>
       <div class="flex flex-col md:flex-row gap-4 justify-center">
-        <NuxtLink to="/about" class="bg-[#D4AF37] text-black px-8 py-3 rounded-full font-bold hover:bg-[#F9E27E] transition-all">
+        <NuxtLink
+          to="/about"
+          class="bg-[#D4AF37] text-black px-8 py-3 rounded-full font-bold hover:bg-[#F9E27E] transition-all"
+        >
           {{ $t('explore_history') }}
         </NuxtLink>
       </div>
