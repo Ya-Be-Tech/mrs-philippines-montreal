@@ -90,7 +90,19 @@
       "Bash(Get-ChildItem *)",
       "Bash(Start-Sleep -Seconds 30)",
       "Bash(awk '{print $9, \"\\(\" $5 \"\\)\"}')",
-      "Bash(pkill -f \"nuxt dev\")"
+      "Bash(pkill -f \"nuxt dev\")",
+      "Bash(taskkill /PID 91008 /F)",
+      "Bash(Start-Sleep -Seconds 5)",
+      "Bash(Get-Content \"C:\\\\Users\\\\yannb\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--vue3-mrsphilippinesmontreal\\\\2ecda36f-f35a-4eb9-91cf-a354adf5953f\\\\tasks\\\\bil31u8s6.output\" -Tail 50)",
+      "Bash(rm -rf .nuxt)",
+      "Bash(rm -rf node_modules/.cache)",
+      "Bash(npm update *)",
+      "Bash(rm -rf .nuxt dev.log)",
+      "Bash(kill -9 52244)",
+      "Bash(Select-Object Name, Mode)",
+      "Bash(Remove-Item -Recurse -Force C:\\\\vue3\\\\mrsphilippinesmontreal\\\\.nuxt -ErrorAction SilentlyContinue)",
+      "Bash(Remove-Item -Recurse -Force C:\\\\vue3\\\\mrsphilippinesmontreal\\\\node_modules\\\\.vite -ErrorAction SilentlyContinue)",
+      "Bash(taskkill *)"
     ]
   }
 }

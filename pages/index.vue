@@ -2,16 +2,12 @@
   <section class="relative min-h-screen flex items-center justify-center bg-mpm-black overflow-hidden">
     <!-- Background image with overlay -->
     <div class="absolute inset-0 z-0">
-      <div class="w-full h-full opacity-40 bg-black" />
-      <iframe
-        src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1935227787165392%2F&show_text=false&width=267&t=0"
-        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200%] h-[200%] md:w-[120%] md:h-[120%] pointer-events-none"
-        style="border:none;overflow:hidden"
-        scrolling="no"
-        frameborder="0"
-        allowfullscreen="true"
-        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-      />
+      <img
+        src="~/assets/images/Crowned Queen 2022/FB_IMG_1778016152022.png"
+        alt="Mrs Philippines Montreal 2022 Queen"
+        class="w-full h-full object-cover object-top"
+      >
+      <div class="absolute inset-0 bg-black/45" />
     </div>
 
     <!-- Content overlay -->
