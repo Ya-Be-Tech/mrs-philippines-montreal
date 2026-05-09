@@ -5,5 +5,6 @@
 </template>
 
 <script setup>
-// No setup needed - NuxtLayout and NuxtPage are auto-imported by Nuxt
+// Import global styles
+import '~/assets/css/main.css'
 </script>

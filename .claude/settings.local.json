@@ -89,7 +89,8 @@
       "Bash(npx nuxt *)",
       "Bash(Get-ChildItem *)",
       "Bash(Start-Sleep -Seconds 30)",
-      "Bash(awk '{print $9, \"\\(\" $5 \"\\)\"}')"
+      "Bash(awk '{print $9, \"\\(\" $5 \"\\)\"}')",
+      "Bash(pkill -f \"nuxt dev\")"
     ]
   }
 }

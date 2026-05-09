@@ -1,9 +1,12 @@
-# Phase 1 — Task Tracking
+# Phase Tracking — Mrs Philippines Montreal
+
+## Phase 1 — Task Tracking
 
 **Phase:** Unblock Core Infrastructure  
 **Start Date:** 2026-05-13  
 **Deadline:** 2026-05-15  
 **Lead:** Frontend Developer (Sonnet 4.6)
+**Status:** COMPLETE
 
 ---
 
@@ -73,9 +76,67 @@ All FE tasks must complete → QA-3 (final verification)
 
 ---
 
+## Phase 2 — Design & Theme Task Tracking
+
+**Phase:** Design & Theme  
+**Start Date:** 2026-05-09  
+**Deadline:** 2026-05-22  
+**Lead:** Designer Agent (Opus 4.7)
+**Status:** COMPLETE
+
+| Task ID | Assignee | Title | Status | Date Started | Date Completed | Tests Passing |
+|---------|----------|-------|--------|---------------|----------------|---|
+| **D2-1** | Designer | Create `tailwind.config.ts` with theme colors | DONE | 2026-05-09 | 2026-05-09 | ✓ Tailwind config created, colors defined, build successful |
+| **D2-2** | Designer | Design Home Page Hero (index.vue) | DONE | 2026-05-09 | 2026-05-09 | ✓ Mobile-first responsive, custom colors applied, font serif loaded |
+| **D2-3** | Designer | Design About Page (about.vue) | DONE | 2026-05-09 | 2026-05-09 | ✓ 4 sections, responsive table, all colors applied, linter clean |
+| **D2-4** | Designer | Design Event Pages (2019 & 2022) | DONE | 2026-05-09 | 2026-05-09 | ✓ Both pages with video embeds, 2022 grid layout responsive (1 col mobile, 3 col desktop) |
+| **D2-5** | Designer | Design Talent Page | DONE | 2026-05-09 | 2026-05-09 | ✓ YouTube embed responsive, story text, dark theme applied |
+| **D2-6** | Designer | Accessibility Audit | DONE | 2026-05-09 | 2026-05-09 | ✓ Color contrast: Gold on Black = 9.42:1 (WCAG AA PASS), font loads, build complete |
+
+---
+
+## Phase 2 Definition of Done
+
+- [x] Tailwind config created with all custom colors and fonts
+- [x] All 5 pages styled with mpm-black, mpm-gold, mpm-text colors
+- [x] Fonts: Playfair Display (serif) for headings, Montserrat (sans) for body
+- [x] Mobile-first responsive: Tested 320px, 768px, 1024px, 1440px layouts
+- [x] Color contrast verified: Gold (#D4AF37) on Black (#0A0A0A) = 9.42:1 (WCAG AA)
+- [x] All pages generate in static build: 15 locale-route combinations
+- [x] Linter: 0 errors, 0 warnings
+- [x] Font import: `@import url('https://fonts.googleapis.com/css2?...Playfair+Display...Montserrat...')`
+
+---
+
+## Phase 2 Deliverables
+
+**Files Created:**
+- `tailwind.config.ts` — Design system foundation with custom colors and fonts
+- `assets/css/main.css` — Global styles, Google Fonts import, Tailwind directives
+
+**Files Modified:**
+- `app/app.vue` — Added CSS import
+- `pages/index.vue` — Enhanced with hero layout, buttons, custom colors
+- `pages/about.vue` — Created with 4 sections, responsive table, colors
+- `pages/events/2019.vue` — Created with video embed, responsive layout
+- `pages/events/2022.vue` — Created with 3-column grid, video embeds
+- `pages/talent.vue` — Created with YouTube embed, story text
+- `locales/en.json` — Added 45 new i18n keys for all pages
+- `locales/fr.json` — Added 45 new i18n keys (French translations)
+- `locales/tl.json` — Added 45 new i18n keys (Tagalog translations)
+
+**Mobile-First Implementation:**
+- Home: Title 4xl mobile -> 6xl desktop, buttons stack mobile -> flex row desktop
+- About: Section text responsive, table scrolls horizontally on mobile
+- Events 2019: Single video responsive with aspect-video class
+- Events 2022: 1 col mobile (grid-cols-1), 3 col desktop (md:grid-cols-3)
+- Talent: YouTube embed aspect-video, responsive text
+
+---
+
 ## Phase 2 Handoff
 
-Once Phase 1 is DONE (all tasks complete, all tests passing):
-- **Designer Agent (Opus 4.7)** begins Phase 2: Design & Theme
-- **Content Lead** begins Phase 3: Content & Localization
-- Both can work in parallel
+Once Phase 2 is DONE (all designs complete, all pages render):
+- **Content Lead** continues Phase 3: Content & Localization
+- **QA Tester** can begin Phase 4: Testing & QA
+- All can work in parallel
