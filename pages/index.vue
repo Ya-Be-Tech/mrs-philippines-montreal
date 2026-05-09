@@ -1,5 +1,5 @@
 <template>
-  <section class="relative min-h-screen flex items-center justify-center bg-mpm-black overflow-hidden">
+  <main class="relative min-h-screen flex items-center justify-center bg-mpm-black overflow-hidden">
     <!-- Background image with overlay -->
     <div class="absolute inset-0 z-0">
       <img
@@ -46,14 +46,17 @@
         </p>
       </div>
     </div>
-  </section>
+  </main>
 </template>
 
 <script setup>
 useHead({
   title: 'Mrs Philippines Montreal - Home',
   meta: [
-    { name: 'description', content: 'Official website of Mrs Philippines Montreal.' }
-  ]
+    { name: 'description', content: 'Official website of Mrs Philippines Montreal pageant celebrating Filipino heritage in Montreal.' },
+    { property: 'og:title', content: 'Mrs Philippines Montreal' },
+    { property: 'og:description', content: 'Official website of Mrs Philippines Montreal pageant celebrating Filipino heritage in Montreal.' },
+    { property: 'og:url', content: 'https://mrsphilippinesmontreal.web.app/' },
+  ],
 })
 </script>

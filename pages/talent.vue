@@ -8,7 +8,7 @@
       <!-- YouTube embed -->
       <div class="aspect-video mb-12 rounded-lg overflow-hidden">
         <iframe
-          src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ"
+          src="https://www.youtube-nocookie.com/embed/dw75giq5L8g"
           title="Talent Contest Winner"
           class="w-full h-full"
           frameborder="0"
@@ -32,7 +32,10 @@
 useHead({
   title: 'Mrs Philippines Montreal - Talent',
   meta: [
-    { name: 'description', content: 'Showcase of the Mrs Philippines Montreal talent contest winner.' }
-  ]
+    { name: 'description', content: 'Showcase of the Mrs Philippines Montreal talent contest winner.' },
+    { property: 'og:title', content: 'Mrs Philippines Montreal - Talent' },
+    { property: 'og:description', content: 'Showcase of the Mrs Philippines Montreal talent contest winner.' },
+    { property: 'og:url', content: 'https://mrsphilippinesmontreal.web.app/talent' },
+  ],
 })
 </script>

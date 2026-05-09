@@ -1,33 +1,23 @@
 import { describe, it, expect } from 'vitest'
-import fs from 'fs'
-import path from 'path'
+import { existsSync } from 'fs'
+import { resolve } from 'path'
 
-describe('Routing - All Pages Should Exist', () => {
-  const projectRoot = path.resolve(__dirname, '../../')
+describe('Page Routes', () => {
+  const root = resolve(__dirname, '../../pages')
 
-  // Test that all required page files exist
-  it('home page (pages/index.vue) exists', () => {
-    const filePath = path.join(projectRoot, 'pages/index.vue')
-    expect(fs.existsSync(filePath)).toBe(true)
+  it('has index page', () => {
+    expect(existsSync(resolve(root, 'index.vue'))).toBe(true)
   })
-
-  it('about page (pages/about.vue) exists', () => {
-    const filePath = path.join(projectRoot, 'pages/about.vue')
-    expect(fs.existsSync(filePath)).toBe(true)
+  it('has about page', () => {
+    expect(existsSync(resolve(root, 'about.vue'))).toBe(true)
   })
-
-  it('events/2019 page (pages/events/2019.vue) exists', () => {
-    const filePath = path.join(projectRoot, 'pages/events/2019.vue')
-    expect(fs.existsSync(filePath)).toBe(true)
+  it('has talent page', () => {
+    expect(existsSync(resolve(root, 'talent.vue'))).toBe(true)
   })
-
-  it('events/2022 page (pages/events/2022.vue) exists', () => {
-    const filePath = path.join(projectRoot, 'pages/events/2022.vue')
-    expect(fs.existsSync(filePath)).toBe(true)
+  it('has events/2019 page', () => {
+    expect(existsSync(resolve(root, 'events/2019.vue'))).toBe(true)
   })
-
-  it('talent page (pages/talent.vue) exists', () => {
-    const filePath = path.join(projectRoot, 'pages/talent.vue')
-    expect(fs.existsSync(filePath)).toBe(true)
+  it('has events/2022 page', () => {
+    expect(existsSync(resolve(root, 'events/2022.vue'))).toBe(true)
   })
 })

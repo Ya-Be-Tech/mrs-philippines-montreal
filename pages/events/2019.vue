@@ -29,7 +29,10 @@
 useHead({
   title: 'Mrs Philippines Montreal - 2019 Event',
   meta: [
-    { name: 'description', content: 'Archive of the 2019 Mrs Philippines Montreal event.' }
-  ]
+    { name: 'description', content: 'Archive of the 2019 Mrs Philippines Montreal event.' },
+    { property: 'og:title', content: 'Mrs Philippines Montreal - 2019 Event' },
+    { property: 'og:description', content: 'Archive of the 2019 Mrs Philippines Montreal event.' },
+    { property: 'og:url', content: 'https://mrsphilippinesmontreal.web.app/events/2019' },
+  ],
 })
 </script>

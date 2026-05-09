@@ -81,7 +81,10 @@
 useHead({
   title: 'Mrs Philippines Montreal - 2022 Event',
   meta: [
-    { name: 'description', content: 'Archive of the 2022 Mrs Philippines Montreal event and contestants.' }
-  ]
+    { name: 'description', content: 'Archive of the 2022 Mrs Philippines Montreal event and contestants.' },
+    { property: 'og:title', content: 'Mrs Philippines Montreal - 2022 Event' },
+    { property: 'og:description', content: 'Archive of the 2022 Mrs Philippines Montreal event and contestants.' },
+    { property: 'og:url', content: 'https://mrsphilippinesmontreal.web.app/events/2022' },
+  ],
 })
 </script>

@@ -21,6 +21,7 @@
         <div class="flex items-center space-x-4">
           <select
             v-model="$i18n.locale"
+            aria-label="Select language"
             class="bg-[#0A0A0A] border border-[#D4AF37]/30 rounded px-2 py-1 text-sm text-[#D4AF37]"
           >
             <option
@@ -33,6 +34,7 @@
           </select>
           <button
             class="md:hidden text-[#D4AF37]"
+            aria-label="Toggle navigation"
             :aria-expanded="mobileOpen"
             @click="mobileOpen = !mobileOpen"
           >
@@ -90,6 +92,7 @@ const navLinks = [
   { to: '/', label: 'home' },
   { to: '/about', label: 'about' },
   { to: '/events/2019', label: 'events_2019' },
-  { to: '/events/2022', label: 'events_2022' }
+  { to: '/events/2022', label: 'events_2022' },
+  { to: '/talent', label: 'talent' }
 ]
 </script>

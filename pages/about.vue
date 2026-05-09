@@ -154,7 +154,10 @@
 useHead({
   title: 'Mrs Philippines Montreal - About',
   meta: [
-    { name: 'description', content: 'Learn about the history and mission of Mrs Philippines Montreal.' }
-  ]
+    { name: 'description', content: 'Learn about the history and mission of Mrs Philippines Montreal.' },
+    { property: 'og:title', content: 'About Mrs Philippines Montreal' },
+    { property: 'og:description', content: 'Learn about the history and mission of Mrs Philippines Montreal.' },
+    { property: 'og:url', content: 'https://mrsphilippinesmontreal.web.app/about' },
+  ],
 })
 </script>
