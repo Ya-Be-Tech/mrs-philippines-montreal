@@ -6,23 +6,24 @@ The Mrs Philippines Montreal (MPM) website is a professional digital platform de
 ## Objectives
 - **Cultural Preservation:** Showcase the history and milestones of the pageant.
 - **Modern Presence:** Provide a professional and elegant digital identity using the gold-and-black theme.
-- **Accessibility:** Support English, French, and Tagalog speakers. i will provide english text translat
+- **Accessibility:** Support English, French, and Filipino/Tagalog speakers with high-contrast, accessible design.
 - **Engagement:** Feature past winners and current event information (2026).
 
-## Scope
-The project includes the development of:
-- **Landing Page (Home):** Hero section with the 2022 Queen, event countdown, and mission statement.
+## Scope (Phase 1 - Static MVP)
+The initial release focuses on a high-quality static site:
+- **Landing Page (Home):** Hero section with the 2022 Queen carousel and mission statement.
 - **About Page:** Detailed history of MPM and FAMAS.
-- **Event Archives (2019 & 2022):** Galleries and contestant profiles.
+- **Event Archives (2019 & 2022):** Photo galleries and contestant profiles.
 - **Talent Page:** Featuring the latest talent contest winner (YouTube integration).
-- **Contact Page:** Inquiry form with backend integration.
-- **Multilingual Support (i18n):** Full site translation in EN, FR, and TG.
+- **Multilingual Support (i18n):** Full site translation in EN, FR, and TL (Filipino/Tagalog).
+
+*Note: The Contact page and any backend components (Node.js, Cloud Run) have been removed from the scope as per user request. The site will be strictly static.*
 
 ## Architecture
-- **Frontend:** Nuxt 3 (Vue.js) for a high-performance, SEO-friendly SPA/SSR experience.
+- **Frontend:** Nuxt 3 (Vue.js) using Static Site Generation (SSG).
 - **Styling:** Tailwind CSS for rapid, mobile-first design.
-- **Backend:** Node.js (Fastify/Express) hosted on Google Cloud Run for dynamic form handling.
-- **Static Hosting:** Google Firebase Hosting for high-speed delivery of the frontend.
+- **i18n:** `@nuxtjs/i18n` with `tl` (Filipino/Tagalog) locale code.
+- **Hosting:** Google Firebase Hosting (Static delivery).
 - **Assets:** Optimized image hosting and YouTube/Facebook video embeds.
 
 ## Technologies
@@ -31,26 +32,32 @@ The project includes the development of:
 - **CSS Framework:** Tailwind CSS
 - **i18n:** @nuxtjs/i18n
 - **Testing:** Vitest (Unit/Component), Playwright (E2E)
-- **Deployment:** Google Firebase & Google Cloud Run
+- **Deployment:** Google Firebase Hosting
 
 ## Features
 - **Mobile-First Design:** Optimized for smartphones and tablets.
-- **Gold-and-Black Theme:** Luxurious aesthetic inspired by the 2026 ticket.
+- **Gold-and-Black Theme:** Luxurious aesthetic inspired by the event ticket with careful contrast checks.
 - **SEO Optimization:** Metadata and schema markup for better visibility.
 - **Interactive Galleries:** Smooth transitions and high-quality image displays.
-- **Contact Form:** Secure submission with validation.
+- **Language Switcher:** Intuitive UI for switching between EN, FR, and TL.
 
-## Testing
-A Test-Driven Development (TDD) approach will be followed:
-- **Unit Tests:** For utility functions and business logic.
-- **Component Tests:** Verifying UI components in isolation.
-- **E2E Tests:** Testing critical user journeys (e.g., language switching, form submission).
+## Accessibility Criteria
+- **Contrast:** Ensure all gold text on black meets WCAG AA standards.
+- **Navigation:** Full keyboard navigation support.
+- **Media:** Alt text for all images and aria-labels for embeds.
+- **Touch:** Minimum tap target sizes of 44x44px for mobile.
+
+## Testing Strategy
+Focusing on stability and user experience:
+- **Smoke Tests:** Verify site builds and all pages render.
+- **i18n Tests:** Confirm language switcher updates content and browser detection works.
+- **UI Tests:** Verifying carousel controls and video embed responsiveness.
 - **Linter/Static Analysis:** ESLint and Prettier for code quality.
 
 ## Deployment
-- **CI/CD:** Automated builds and deployments via GitHub Actions (if requested).
-- **Frontend:** `firebase deploy` for global CDN distribution.
-- **Backend:** `gcloud run deploy` for scalable containerized logic.
+- **Method:** `nuxt generate` to build static files.
+- **Target:** `firebase deploy` to Firebase Hosting.
+- **Instructions:** Comprehensive GCP setup guide for non-technical users.
 
 ## Conclusion
-This plan provides a roadmap for delivering a world-class website that honors the Filipino community's traditions while embracing modern web standards. By combining Nuxt 3's power with a sophisticated design, Mrs Philippines Montreal will have a digital presence that matches the prestige of its live events.
+This refined plan delivers a world-class static website that honors the Filipino community's traditions. By focusing on a phased static approach, we ensure high performance and reliability while maintaining a sophisticated design that matches the prestige of Mrs Philippines Montreal.

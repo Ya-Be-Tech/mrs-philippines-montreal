@@ -83,7 +83,9 @@
       "Bash(sed -i \"s/test\\('chain calls retriever with last user message content', async \\(t\\) => {/test\\('chain calls retriever with last user message content', { skip: skipRag }, async \\(t\\) => {/\" tests/rag.test.ts)",
       "Bash(sed -i \"s/test\\('chain.invoke returns a string', async \\(t\\) => {/test\\('chain.invoke returns a string', { skip: skipRag }, async \\(t\\) => {/\" tests/rag.test.ts)",
       "Bash(sed -i \"s/test\\('locale fr causes French to appear in the LLM system prompt', async \\(t\\) => {/test\\('locale fr causes French to appear in the LLM system prompt', { skip: skipRag }, async \\(t\\) => {/\" tests/rag.test.ts)",
-      "Bash(sed -i \"s/test\\('locale tl causes Tagalog to appear in the LLM system prompt', async \\(t\\) => {/test\\('locale tl causes Tagalog to appear in the LLM system prompt', { skip: skipRag }, async \\(t\\) => {/\" tests/rag.test.ts)"
+      "Bash(sed -i \"s/test\\('locale tl causes Tagalog to appear in the LLM system prompt', async \\(t\\) => {/test\\('locale tl causes Tagalog to appear in the LLM system prompt', { skip: skipRag }, async \\(t\\) => {/\" tests/rag.test.ts)",
+      "Bash(Get-ChildItem -Path \"C:\\\\vue3\\\\mrsphilippinesmontreal\" -Recurse -Force)",
+      "Bash(Select-Object FullName)"
     ]
   }
 }
