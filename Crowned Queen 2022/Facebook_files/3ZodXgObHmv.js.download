@@ -1,0 +1,4 @@
+;/*FB_PKG_DELIM*/
+
+__d("MWFDSPencil.svg.react",["cr:21729"],(function(t,n,r,o,a,i,l){"use strict";l.default=n("cr:21729")}),98);
+__d("MWXIconPencil",["MWFDSPencil.svg.react","MWXSvgIcon","SVGIcon"],(function(t,n,r,o,a,i,l){"use strict";var e=o("MWXSvgIcon").mwxSvgIcon(o("SVGIcon").svgIcon(r("MWFDSPencil.svg.react")),!1);l.default=e}),98);
