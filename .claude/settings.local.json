@@ -85,7 +85,11 @@
       "Bash(sed -i \"s/test\\('locale fr causes French to appear in the LLM system prompt', async \\(t\\) => {/test\\('locale fr causes French to appear in the LLM system prompt', { skip: skipRag }, async \\(t\\) => {/\" tests/rag.test.ts)",
       "Bash(sed -i \"s/test\\('locale tl causes Tagalog to appear in the LLM system prompt', async \\(t\\) => {/test\\('locale tl causes Tagalog to appear in the LLM system prompt', { skip: skipRag }, async \\(t\\) => {/\" tests/rag.test.ts)",
       "Bash(Get-ChildItem -Path \"C:\\\\vue3\\\\mrsphilippinesmontreal\" -Recurse -Force)",
-      "Bash(Select-Object FullName)"
+      "Bash(Select-Object FullName)",
+      "Bash(npx nuxt *)",
+      "Bash(Get-ChildItem *)",
+      "Bash(Start-Sleep -Seconds 30)",
+      "Bash(awk '{print $9, \"\\(\" $5 \"\\)\"}')"
     ]
   }
 }
