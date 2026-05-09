@@ -1,5 +1,42 @@
 # Project Plan: Mrs Philippines Montreal Website
 
+---
+
+## ⚡ PHASE 1 STATUS — TEAM ASSIGNMENTS & TDD ENFORCEMENT
+
+**Start Date:** 2026-05-13  
+**Deadline:** 2026-05-15  
+**Tracking:** See `planning/TRACKING.md`
+
+### Team Assignments
+
+| Role | Tasks | Dependencies |
+|---|---|---|
+| **QA Tester** | QA-1 (install tools) → QA-2 (write failing tests) → QA-3 (verification) | Must start first; blocks all FE work |
+| **Frontend Dev** | FE-1 (fix app.vue) → FE-2 (page stubs) → FE-3 (SSG) → FE-4 (mobile nav) | Starts after QA-2 tests are red |
+
+### TDD Enforcement
+
+- **Tests written FIRST** — all unit and E2E tests written in red state before any implementation
+- **Implementation second** — each FE task makes specific failing tests go green
+- **Lint & verification last** — all code must pass ESLint before marking done
+
+### Phase 1 Scope (6 days, ~4 hours work)
+
+1. Install dev tools (vitest, playwright, eslint, prettier)
+2. Write all failing tests
+3. Fix `app.vue` (replace NuxtWelcome)
+4. Create 4 page stubs (bare minimum — no content yet)
+5. Configure SSG (static site generation)
+6. Fix mobile nav toggle
+7. Final verification (all green tests, clean lint, static output ready)
+
+### Phase 1 Blocks Phase 2 & 3
+
+Phase 2 (Design) and Phase 3 (Content) **cannot start until Phase 1 is 100% done**. Phase 1 is the critical path.
+
+---
+
 ## Introduction
 The Mrs Philippines Montreal (MPM) website is a professional digital platform dedicated to celebrating the heritage, beauty, and leadership of the Filipino community in Montreal. This project aims to deliver a modern, sleek, and mobile-first experience using Nuxt 3 and Tailwind CSS.
 
