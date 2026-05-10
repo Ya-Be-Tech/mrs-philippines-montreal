@@ -21,9 +21,11 @@ jobs:
       - name: Debug - List Bindings
         run: ls node_modules/@oxc-parser/ || true
       - name: Generate Nuxt Types
-        run: npx nuxi prepare --verbose
+        run: npx nuxi prepare
       - name: Check Generated Types
-        run: ls -R .nuxt/tsconfig.*.json || true
+        run: |
+          ls -la .nuxt/tsconfig.json || echo "Main tsconfig missing"
+          ls -la .nuxt/tsconfig.app.json || echo "App tsconfig missing"
       - name: Lint
         run: npm run lint
       - name: Typecheck
