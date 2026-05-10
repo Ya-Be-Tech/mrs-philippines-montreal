@@ -18,6 +18,11 @@
         />
       </div>
 
+      <!-- Performer name -->
+      <p class="text-2xl md:text-3xl font-serif font-bold text-mpm-gold mb-4">
+        {{ $t('talent_winner_name') }}
+      </p>
+
       <!-- Story/context -->
       <div class="prose prose-invert max-w-none">
         <p class="text-lg leading-relaxed text-mpm-text">
