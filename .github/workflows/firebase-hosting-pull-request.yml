@@ -20,8 +20,12 @@ jobs:
           cache: 'npm'
       - name: Install dependencies
         run: npm install --legacy-peer-deps
-      - name: Generate Types
-        run: npx nuxi prepare
+      - name: Debug - List Bindings
+        run: ls node_modules/@oxc-parser/ || true
+      - name: Generate Nuxt Types
+        run: npx nuxi prepare --verbose
+      - name: Check Generated Types
+        run: ls -R .nuxt/tsconfig.*.json || true
       - name: Lint
         run: npm run lint
       - name: Typecheck
