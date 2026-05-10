@@ -37,5 +37,8 @@
     "vitest-environment-nuxt": "^2.0.0",
     "vue-eslint-parser": "^10.4.0",
     "vue-tsc": "^2.0.0"
+  },
+  "optionalDependencies": {
+    "@oxc-parser/binding-linux-x64-gnu": "0.56.0"
   }
 }
