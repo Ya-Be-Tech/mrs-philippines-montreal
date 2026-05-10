@@ -1,7 +1,17 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  compatibilityDate: '2026-05-09',
+  ssr: true,
+  css: ['~/assets/css/main.css'],
   devtools: { enabled: true },
   modules: ['@nuxtjs/tailwindcss', '@nuxtjs/i18n'],
+  experimental: {
+    appManifest: false,
+  },
+  tailwindcss: {
+    config: {
+      path: '~/tailwind.config.ts',
+    },
+  },
   i18n: {
     locales: [
       { code: 'en', name: 'English', file: 'en.json' },
