@@ -9,6 +9,8 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "typecheck": "nuxt typecheck",
     "test:e2e": "playwright test",
     "lint": "eslint . --ext .vue,.ts,.js",
     "lint:fix": "eslint . --fix"
