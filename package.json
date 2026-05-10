@@ -42,7 +42,9 @@
     "@oxc-parser/binding-linux-x64-gnu": "0.56.0",
     "@oxc-transform/binding-linux-x64-gnu": "0.56.0",
     "@oxc-minify/binding-linux-x64-gnu": "0.56.0",
-    "@oxc-resolver/binding-linux-x64-gnu": "0.56.0"
+    "@oxc-resolver/binding-linux-x64-gnu": "0.56.0",
+    "@rollup/rollup-linux-x64-gnu": "^4.0.0",
+    "@esbuild/linux-x64": "^0.20.0"
   },
   "supportedArchitectures": {
     "os": ["linux", "win32"],
