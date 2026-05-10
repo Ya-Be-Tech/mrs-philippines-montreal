@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest'
-import en from '../../locales/en.json'
-import fr from '../../locales/fr.json'
-import tl from '../../locales/tl.json'
+import en from '../../i18n/locales/en.json'
+import fr from '../../i18n/locales/fr.json'
+import tl from '../../i18n/locales/tl.json'
 
 describe('i18n key parity', () => {
   const enKeys = Object.keys(en).sort()
