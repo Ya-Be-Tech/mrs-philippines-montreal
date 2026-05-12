@@ -77,8 +77,23 @@
     <main>
       <slot />
     </main>
-    <footer class="bg-[#0A0A0A] border-t border-[#D4AF37]/30 py-8 text-center">
-      <p class="text-[#B59A5A]">
+    <footer class="bg-[#0A0A0A] border-t border-[#D4AF37]/30 py-8">
+      <!-- Sponsor banner -->
+      <div class="flex flex-row items-center justify-center gap-4 px-4 mb-6">
+        <a href="https://techyabe.com" target="_blank" rel="noopener noreferrer">
+          <img
+            :src="`/banners/banner_300x250_${locale}.png`"
+            alt="Ya Be Tech"
+            class="w-[75px] h-[63px] object-contain hover:opacity-90 transition-opacity"
+          >
+        </a>
+        <p class="text-[#B59A5A] text-center md:text-left max-w-xs text-sm md:text-base">
+          {{ $t('sponsor_text') }}
+        </p>
+      </div>
+
+      <!-- Copyright -->
+      <p class="text-[#B59A5A] text-center text-sm">
         &copy; {{ new Date().getFullYear() }} Mrs Philippines Montreal. All rights reserved.
       </p>
     </footer>

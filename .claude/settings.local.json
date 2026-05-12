@@ -102,7 +102,9 @@
       "Bash(Select-Object Name, Mode)",
       "Bash(Remove-Item -Recurse -Force C:\\\\vue3\\\\mrsphilippinesmontreal\\\\.nuxt -ErrorAction SilentlyContinue)",
       "Bash(Remove-Item -Recurse -Force C:\\\\vue3\\\\mrsphilippinesmontreal\\\\node_modules\\\\.vite -ErrorAction SilentlyContinue)",
-      "Bash(taskkill *)"
+      "Bash(taskkill *)",
+      "Bash(gemini exec *)",
+      "Bash(Select-String -Pattern \"banner\")"
     ]
   }
 }
