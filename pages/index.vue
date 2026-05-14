@@ -3,7 +3,7 @@
     <!-- Background image with overlay -->
     <div class="absolute inset-0 z-0">
       <img
-        src="~/assets/images/hero-queen-2022.png"
+        src="~/assets/images/queen_transparent.png"
         alt="Mrs Philippines Montreal 2022 Queen"
         class="w-full h-full object-cover object-top"
       >
@@ -12,7 +12,7 @@
 
     <!-- Content overlay -->
     <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
-      <h1 class="text-4xl md:text-6xl font-serif font-bold text-mpm-gold mb-6 drop-shadow-lg">
+      <h1 class="text-3xl md:text-5xl font-serif font-bold text-mpm-gold mb-6 drop-shadow-lg">
         {{ $t('home_title') }}
       </h1>
 

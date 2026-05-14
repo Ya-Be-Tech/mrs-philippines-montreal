@@ -1,7 +1,7 @@
 <template>
   <main class="bg-mpm-black text-mpm-text min-h-screen pt-24 pb-12">
     <div class="max-w-5xl mx-auto px-4 md:px-6">
-      <h1 class="text-4xl md:text-5xl font-serif font-bold text-mpm-gold mb-4">
+      <h1 class="text-3xl md:text-4xl font-serif font-bold text-mpm-gold mb-4">
         {{ $t('events_index_title') }}
       </h1>
       <p class="text-lg text-mpm-text-muted mb-12">
@@ -15,7 +15,7 @@
           class="group border border-mpm-gold/60 rounded-lg p-6 hover:border-mpm-gold transition-colors flex flex-col gap-4"
         >
           <div class="flex items-center justify-between">
-            <span class="text-4xl font-serif font-bold text-mpm-gold group-hover:text-mpm-gold-light transition-colors">2026</span>
+            <span class="text-3xl font-serif font-bold text-mpm-gold group-hover:text-mpm-gold-light transition-colors">2026</span>
             <span class="border border-mpm-gold text-mpm-gold text-xs uppercase tracking-widest px-2 py-0.5 rounded">
               {{ $t('events_2026_coming_soon') }}
             </span>
@@ -34,7 +34,7 @@
           class="group border border-mpm-gold/30 rounded-lg p-6 hover:border-mpm-gold transition-colors flex flex-col gap-4"
         >
           <div class="flex items-center justify-between">
-            <span class="text-4xl font-serif font-bold text-mpm-gold group-hover:text-mpm-gold-light transition-colors">2022</span>
+            <span class="text-3xl font-serif font-bold text-mpm-gold group-hover:text-mpm-gold-light transition-colors">2022</span>
             <span class="text-mpm-text-muted text-sm uppercase tracking-widest">Gala</span>
           </div>
           <p class="text-mpm-text-muted text-sm leading-relaxed">
@@ -51,7 +51,7 @@
           class="group border border-mpm-gold/30 rounded-lg p-6 hover:border-mpm-gold transition-colors flex flex-col gap-4"
         >
           <div class="flex items-center justify-between">
-            <span class="text-4xl font-serif font-bold text-mpm-gold group-hover:text-mpm-gold-light transition-colors">2019</span>
+            <span class="text-3xl font-serif font-bold text-mpm-gold group-hover:text-mpm-gold-light transition-colors">2019</span>
             <span class="text-mpm-text-muted text-sm uppercase tracking-widest">Gala</span>
           </div>
           <p class="text-mpm-text-muted text-sm leading-relaxed">

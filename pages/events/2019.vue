@@ -1,7 +1,7 @@
 <template>
   <main class="bg-mpm-black text-mpm-text min-h-screen pt-24 pb-12">
     <div class="max-w-4xl mx-auto px-4 md:px-6">
-      <h1 class="text-4xl md:text-5xl font-serif font-bold text-mpm-gold mb-6">
+      <h1 class="text-3xl md:text-4xl font-serif font-bold text-mpm-gold mb-6">
         {{ $t('events_2019_title') }}
       </h1>
       <p class="text-lg text-mpm-text-muted mb-12">
