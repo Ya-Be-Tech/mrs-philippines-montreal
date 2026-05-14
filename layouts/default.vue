@@ -2,6 +2,7 @@
   <div class="min-h-screen bg-[#0A0A0A] text-[#F5F5F5] font-sans">
     <header class="sticky top-0 z-50 bg-[#0A0A0A]/80 backdrop-blur-md border-b border-[#D4AF37]/30">
       <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <!-- TODO: replace with vectorial logo -->
         <NuxtLink
           to="/"
           class="text-2xl font-serif font-bold text-[#D4AF37]"
@@ -78,22 +79,33 @@
       <slot />
     </main>
     <footer class="bg-[#0A0A0A] border-t border-[#D4AF37]/30 py-8">
-      <!-- Sponsor banner -->
-      <div class="flex flex-row items-center justify-center gap-4 px-4 mb-6">
-        <a href="https://techyabe.com" target="_blank" rel="noopener noreferrer">
-          <img
-            :src="`/banners/banner_300x250_${locale}.png`"
-            alt="Ya Be Tech"
-            class="w-[75px] h-[63px] object-contain hover:opacity-90 transition-opacity"
+      <!-- Sponsors section -->
+      <div class="container mx-auto px-4 mb-8">
+        <h2 class="text-center text-[#D4AF37] font-serif text-sm uppercase tracking-widest mb-6 opacity-70">
+          {{ $t('sponsors_title') }}
+        </h2>
+        <div class="flex flex-wrap items-center justify-center gap-6">
+          <a
+            href="https://techyabe.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex flex-col items-center gap-2 p-4 border border-[#D4AF37]/20 rounded hover:border-[#D4AF37]/50 transition-colors group"
           >
-        </a>
-        <p class="text-[#B59A5A] text-center md:text-left max-w-xs text-sm md:text-base">
-          {{ $t('sponsor_text') }}
-        </p>
+            <img
+              :src="`/banners/banner_300x250_${locale}.png`"
+              alt="Ya Be Tech"
+              class="w-[150px] h-[125px] object-contain"
+            >
+            <span class="text-[#B59A5A] text-xs group-hover:text-[#D4AF37] transition-colors">techyabe.com</span>
+            <p class="text-[#B59A5A] text-center text-xs mt-1 max-w-[150px]">
+              {{ $t('sponsor_text') }}
+            </p>
+          </a>
+        </div>
       </div>
 
       <!-- Copyright -->
-      <p class="text-[#B59A5A] text-center text-sm">
+      <p class="text-[#B59A5A] text-center text-sm border-t border-[#D4AF37]/20 pt-6">
         &copy; {{ new Date().getFullYear() }} Mrs Philippines Montreal. All rights reserved.
       </p>
     </footer>
@@ -113,8 +125,6 @@ const onLocaleChange = (event) => {
 const navLinks = [
   { to: '/', label: 'home' },
   { to: '/about', label: 'about' },
-  { to: '/events/2019', label: 'events_2019' },
-  { to: '/events/2022', label: 'events_2022' },
-  { to: '/talent', label: 'talent' }
+  { to: '/events', label: 'events' }
 ]
 </script>

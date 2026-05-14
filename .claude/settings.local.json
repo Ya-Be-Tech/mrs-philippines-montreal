@@ -104,7 +104,15 @@
       "Bash(Remove-Item -Recurse -Force C:\\\\vue3\\\\mrsphilippinesmontreal\\\\node_modules\\\\.vite -ErrorAction SilentlyContinue)",
       "Bash(taskkill *)",
       "Bash(gemini exec *)",
-      "Bash(Select-String -Pattern \"banner\")"
+      "Bash(Select-String -Pattern \"banner\")",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\vue3\\\\mrsphilippinesmontreal\" -Recurse -Directory -Depth 2 | Select-Object @{Name=\"Path\";Expression={$_.FullName.Replace\\(\"C:\\\\vue3\\\\mrsphilippinesmontreal\\\\\", \"\"\\)}} | Sort-Object Path)",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\vue3\\\\mrsphilippinesmontreal\" | Where-Object { -not $_.Name.StartsWith\\('.'\\) } | Select-Object Name, @{Name=\"Type\";Expression={if\\($_.PSIsContainer\\){\"Dir\"}else{\"File\"}}} | Format-Table -AutoSize)",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\vue3\\\\mrsphilippinesmontreal\\\\pages\" -Recurse | Select-Object Name, FullName | ForEach-Object { $_.FullName.Replace\\(\"C:\\\\vue3\\\\mrsphilippinesmontreal\\\\\", \"\"\\) })",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\vue3\\\\mrsphilippinesmontreal\\\\components\" -Recurse | Select-Object Name, FullName | ForEach-Object { $_.FullName.Replace\\(\"C:\\\\vue3\\\\mrsphilippinesmontreal\\\\\", \"\"\\) })",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\vue3\\\\mrsphilippinesmontreal\\\\layouts\" -Recurse | Select-Object Name, FullName | ForEach-Object { $_.FullName.Replace\\(\"C:\\\\vue3\\\\mrsphilippinesmontreal\\\\\", \"\"\\) })",
+      "PowerShell(Get-ChildItem *)",
+      "Bash(Copy-Item *)",
+      "PowerShell(Copy-Item *)"
     ]
   }
 }

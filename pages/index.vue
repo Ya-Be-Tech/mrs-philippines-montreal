@@ -3,7 +3,7 @@
     <!-- Background image with overlay -->
     <div class="absolute inset-0 z-0">
       <img
-        src="~/assets/images/Crowned Queen 2022/FB_IMG_1778016152022.png"
+        src="~/assets/images/hero-queen-2022.png"
         alt="Mrs Philippines Montreal 2022 Queen"
         class="w-full h-full object-cover object-top"
       >
@@ -25,18 +25,13 @@
       </p>
 
       <!-- CTA Buttons -->
-      <div class="flex flex-col md:flex-row gap-4 justify-center mb-12">
+      <div class="flex justify-center mb-12">
         <NuxtLink
           to="/about"
           class="bg-mpm-gold text-mpm-black px-8 py-3 font-bold rounded hover:bg-mpm-gold-light transition-all duration-200"
         >
           {{ $t('explore_history') }}
         </NuxtLink>
-        <button
-          class="border-2 border-mpm-gold text-mpm-gold px-8 py-3 font-bold rounded hover:bg-mpm-gold/10 transition-all duration-200"
-        >
-          {{ $t('get_involved') }}
-        </button>
       </div>
 
       <!-- Bouncing text -->

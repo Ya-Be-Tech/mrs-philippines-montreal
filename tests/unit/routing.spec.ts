@@ -20,4 +20,10 @@ describe('Page Routes', () => {
   it('has events/2022 page', () => {
     expect(existsSync(resolve(root, 'events/2022.vue'))).toBe(true)
   })
+  it('has events index page', () => {
+    expect(existsSync(resolve(root, 'events/index.vue'))).toBe(true)
+  })
+  it('has events/2026 page', () => {
+    expect(existsSync(resolve(root, 'events/2026.vue'))).toBe(true)
+  })
 })

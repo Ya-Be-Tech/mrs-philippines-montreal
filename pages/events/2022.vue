@@ -8,6 +8,52 @@
         {{ $t('events_2022_intro') }}
       </p>
 
+      <!-- Evening highlights video -->
+      <section class="mb-16">
+        <h2 class="text-2xl font-serif font-bold text-mpm-gold mb-3">
+          {{ $t('events_2022_highlights_title') }}
+        </h2>
+        <p class="text-mpm-text-muted mb-6 max-w-2xl leading-relaxed">
+          {{ $t('events_2022_highlights_text') }}
+        </p>
+        <div class="aspect-video rounded-lg overflow-hidden border border-mpm-gold/20">
+          <video
+            controls
+            preload="metadata"
+            class="w-full h-full object-cover"
+          >
+            <source
+              src="/videos/event-2022-highlights.mp4"
+              type="video/mp4"
+            >
+          </video>
+        </div>
+      </section>
+
+      <!-- Talent contest winner -->
+      <section class="mb-16">
+        <h2 class="text-2xl font-serif font-bold text-mpm-gold mb-3">
+          {{ $t('events_2022_talent_title') }}
+        </h2>
+        <p class="text-2xl font-serif text-mpm-gold-light mb-2">
+          {{ $t('talent_winner_name') }}
+        </p>
+        <p class="text-mpm-text-muted mb-6 max-w-2xl leading-relaxed">
+          {{ $t('talent_story') }}
+        </p>
+        <div class="aspect-video rounded-lg overflow-hidden border border-mpm-gold/20">
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/dw75giq5L8g"
+            title="Talent Contest Winner"
+            class="w-full h-full"
+            frameborder="0"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          />
+        </div>
+      </section>
+
       <!-- Contestant cards grid -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <!-- Card 1: Raziel De Leon -->
