@@ -2,12 +2,15 @@
   <div class="min-h-screen bg-[#0A0A0A] text-[#F5F5F5] font-sans">
     <header class="sticky top-0 z-50 bg-[#0A0A0A]/80 backdrop-blur-md border-b border-[#D4AF37]/30">
       <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
-        <!-- TODO: replace with vectorial logo -->
         <NuxtLink
           to="/"
-          class="text-2xl font-serif font-bold text-[#D4AF37]"
+          aria-label="Mrs Philippines Montreal — Home"
         >
-          MPM
+          <img
+            src="/logomrsphilippines.svg"
+            alt="Mrs Philippines Montreal"
+            class="h-10 w-auto"
+          >
         </NuxtLink>
         <div class="hidden md:flex space-x-6">
           <NuxtLink
