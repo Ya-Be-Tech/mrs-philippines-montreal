@@ -5,7 +5,7 @@
         {{ $t('events_2026_coming_soon') }}
       </span>
 
-      <h1 class="text-4xl md:text-6xl font-serif font-bold text-mpm-gold mb-6">
+      <h1 class="text-3xl md:text-5xl font-serif font-bold text-mpm-gold mb-6">
         {{ $t('events_2026_title') }}
       </h1>
 
