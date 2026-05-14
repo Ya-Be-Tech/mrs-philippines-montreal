@@ -3,6 +3,13 @@ export default defineNuxtConfig({
   ssr: true,
   css: ['~/assets/css/main.css'],
   devtools: { enabled: true },
+  app: {
+    head: {
+      link: [
+        { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
+      ],
+    },
+  },
   modules: ['@nuxtjs/tailwindcss', '@nuxtjs/i18n'],
   experimental: {
     appManifest: false,

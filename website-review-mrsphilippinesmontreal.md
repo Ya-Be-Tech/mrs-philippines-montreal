@@ -1,6 +1,6 @@
 # Website Review: mrsphilippinesmontreal.com
 
-**Last updated:** 2026-05-14
+**Last updated:** 2026-05-14 (end of day)
 **Review originally conducted:** 2026-05-13
 
 ---
@@ -22,15 +22,16 @@
 |---|---|---|
 | `/` | Home | Active |
 | `/about` | About / History | Active |
-| `/events` | Events Archive | **Added 2026-05-14** |
+| `/events` | Events Archive (2019, 2022, 2026 cards) | Active |
 | `/events/2019` | 2019 Event | Active |
-| `/events/2022` | 2022 Event (+ highlights video) | **Updated 2026-05-14** |
-| `/talent` | Talent Contest Winner | Active |
+| `/events/2022` | 2022 Event (highlights video + talent section) | Active |
+| `/events/2026` | 2026 Upcoming Event | **Added 2026-05-14** |
+| `/talent` | Talent Contest Winner | Active (file kept, removed from nav) |
 
 ### Navigation
 
-- Top-level sticky nav bar with "MPM" text logo (gold, serif) — **vectorial logo replacement pending (YB)**.
-- Navigation items: Home, About, Events, Talent — **simplified from 5 to 4 links on 2026-05-14**.
+- Top-level sticky nav bar with `logomrsphilippines.svg` logo (transparent background, renders on dark header).
+- Navigation items: Home, About, Events — **3 links (Talent removed 2026-05-14, merged into /events/2022)**.
 - Language switcher: English / Français / Tagalog.
 - Mobile hamburger menu with proper `aria-expanded` and toggle.
 
@@ -60,42 +61,38 @@
 
 ### About Page (`/about`)
 
-**Current state:** History text, milestones table, cultural impact sections.
+**Current state:** Vertical gold timeline (1960s → 1990s → 2010 → 2011 → 2012 → 2019 → 2022 → 2026) with gold dot markers, year labels, titles, and links to event pages. Cultural impact and legacy sections retained below.
 
-**YB decisions logged:**
-- ✅ Timeline component requested — **YB approved, Phase 2**.
-- ✅ Photos from each era — **YB has no pictures available; skip for now**.
-- Mission/vision — not yet discussed.
-- Organizer info — not yet discussed.
+**Completed:**
+- ✅ Visual timeline component implemented (replaced flat text + table).
+- ✅ Photos skipped — YB has no pictures available.
 
 **Pending (Phase 2):**
-- 🔄 Visual timeline component (1960s → present).
 - 🔄 Mission/vision statement section.
+- 🔄 Organizer info — not yet discussed.
 
 ---
 
-### Events Archive (`/events`) — NEW
+### Events Archive (`/events`)
 
-**Added 2026-05-14.**
-- Card grid listing past galas (2022, 2019) with year, short description, and "View Event →" link.
-- Nav updated to point "Events" → `/events` (replaces the two separate nav links).
-- Prerender routes added for all 3 locales.
+**Current state:** Card grid with 3 events — 2026 (Coming Soon badge, top), 2022, 2019. Each card links to its event page.
 
-**YB decisions logged:**
-- 🔄 Upcoming event page (`/events/2026`) — **YB approved**. Page should state "candidates will be revealed soon." — **Phase 2**.
+**Completed:**
+- ✅ `/events/2026` upcoming event page — "Coming Soon" badge, September 26th date, trilingual "candidates will be revealed soon" teaser.
+- ✅ 2026 card added to the archive index, ordered most recent first.
 
 ---
 
-### 2022 Event Page (`/events/2022`) — UPDATED
+### 2022 Event Page (`/events/2022`)
 
-**Updated 2026-05-14:**
-- Added full "Evening Highlights" video section at the top of the page.
-- Video: `public/videos/event-2022-highlights.mp4` — covers the full arc of the gala evening.
-- Descriptive text written in all 3 languages explaining the video.
-- Existing contestant cards (Raziel De Leon, Almaleen Castillo, Marissa Obaldo) retained below.
+**Current state:** Three sections in order:
+1. Evening Highlights — `public/videos/event-2022-highlights.mp4` with trilingual description.
+2. Talent Contest Winner — Raziel De Leon YouTube embed with name and story text.
+3. Contestant cards — Raziel De Leon, Almaleen Castillo, Marissa Obaldo (Facebook reels).
 
-**YB decisions logged:**
-- 🔄 Move talent page content into the 2022 event page — **YB approved, Phase 2**.
+**Completed:**
+- ✅ Evening highlights video added.
+- ✅ Talent section merged in from `/talent` page.
 
 ---
 
@@ -110,11 +107,7 @@
 
 ### Talent Page (`/talent`)
 
-**Current state:** YouTube embed of Raziel De Leon's talent performance.
-
-**YB decisions logged:**
-- 🔄 Merge talent page content into the 2022 event page — **YB approved, Phase 2**.
-- 🔄 After merge, remove `/talent` from nav or redirect it.
+**Current state:** File kept (routing test references it), removed from nav. Content duplicated into `/events/2022`.
 
 ---
 
@@ -179,19 +172,18 @@
 - [x] Update announcement banner with specific date (September 26th, 2026)
 - [x] Rename hero image to `hero-queen-2022.png`
 - [x] Redesign sponsor section (proper card with heading, logo, URL, text)
-- [x] Add TODO comment for MPM vectorial logo replacement
 - [x] Create unified events archive at `/events`
 - [x] Add full evening highlights video to `/events/2022` with trilingual description
-- [x] Simplify nav to 4 links (Home / About / Events / Talent)
+- [x] Simplify nav to 3 links (Home / About / Events)
+- [x] Create `/events/2026` upcoming event page ("candidates will be revealed soon")
+- [x] Merge talent section into `/events/2022`
+- [x] Add visual timeline to About page (1960s → 2026)
+- [x] Replace "MPM" text with vectorial logo (`logomrsphilippines.svg`)
+- [x] Favicon — self-contained gold crown SVG on black (`public/favicon.svg`)
 
-### Phase 2 — YB Approved, Pending Implementation
+### Phase 2 — Not Yet Started
 
-- [ ] Create `/events/2026` upcoming event page ("candidates will be revealed soon")
-- [ ] Merge talent page content into `/events/2022`
-- [ ] Add visual timeline component to About page
-- [ ] Replace "MPM" text with vectorial logo (YB to provide asset)
-
-### Phase 2 — Not Yet Decided
+### Phase 2 — Not Yet Decided (open for discussion)
 
 - [ ] Add contact page with email/form
 - [ ] Add social media links (Facebook, YouTube) to header/footer

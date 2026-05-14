@@ -112,7 +112,8 @@
       "PowerShell(Get-ChildItem -Path \"C:\\\\vue3\\\\mrsphilippinesmontreal\\\\layouts\" -Recurse | Select-Object Name, FullName | ForEach-Object { $_.FullName.Replace\\(\"C:\\\\vue3\\\\mrsphilippinesmontreal\\\\\", \"\"\\) })",
       "PowerShell(Get-ChildItem *)",
       "Bash(Copy-Item *)",
-      "PowerShell(Copy-Item *)"
+      "PowerShell(Copy-Item *)",
+      "PowerShell(Move-Item *)"
     ]
   }
 }
