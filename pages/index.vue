@@ -18,7 +18,7 @@
 
       <!-- Subtitles -->
       <p class="text-lg md:text-xl text-mpm-text mb-4 italic">
-        "{{ $t('home_subtitle_1') }}"
+        {{ $t('home_subtitle_1') }}
       </p>
       <p class="text-lg md:text-xl text-mpm-text-muted mb-12">
         {{ $t('home_subtitle_2') }}

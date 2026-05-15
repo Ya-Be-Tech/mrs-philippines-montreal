@@ -9,7 +9,7 @@
           <img
             src="/logomrsphilippines.svg"
             alt="Mrs Philippines Montreal"
-            class="h-10 w-auto"
+            class="h-12 w-auto"
           >
         </NuxtLink>
         <div class="hidden md:flex space-x-6">
