@@ -3,18 +3,18 @@
     <!-- Header — full width -->
     <div class="px-4 md:px-12 text-center mb-12">
       <h1 class="text-2xl md:text-4xl font-serif font-bold text-mpm-gold mb-3 uppercase leading-tight">
-        Presenting the Official Candidates of Mrs. Philippines&ndash;Montreal 2026
+        {{ $t('contestants_header_title') }}
       </h1>
 
       <p class="text-mpm-gold/60 text-xs uppercase tracking-widest mb-8">
-        Photos by: Bryan and Janette Photography
+        {{ $t('contestants_photo_credit') }}
       </p>
 
       <div class="text-mpm-text-muted text-base leading-relaxed space-y-4 text-left">
-        <p>With beauty, grace, confidence, and a commitment to making a difference, these remarkable women are ready to embark on an unforgettable journey toward the crown.</p>
-        <p>Join us as we proudly introduce the Official Candidates of Mrs. Philippines&ndash;Montreal 2026, women who embody the strength, elegance, and spirit of the Filipina in our vibrant Montreal community.</p>
-        <p>Each candidate brings her own inspiring story, passion, and purpose as she competes for the prestigious title and the opportunity to serve as an ambassador of Filipino culture, empowerment, and community involvement.</p>
-        <p>Let us celebrate their courage, achievements, and dedication as they begin their quest for the crown.</p>
+        <p>{{ $t('contestants_para_1') }}</p>
+        <p>{{ $t('contestants_para_2') }}</p>
+        <p>{{ $t('contestants_para_3') }}</p>
+        <p>{{ $t('contestants_para_4') }}</p>
       </div>
     </div>
 
