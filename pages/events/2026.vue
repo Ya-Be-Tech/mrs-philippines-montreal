@@ -15,9 +15,16 @@
 
       <div class="w-16 border-t border-mpm-gold/40 mx-auto mb-10" />
 
-      <p class="text-lg leading-relaxed text-mpm-text-muted max-w-xl mx-auto">
+      <p class="text-lg leading-relaxed text-mpm-text-muted max-w-xl mx-auto mb-10">
         {{ $t('events_2026_teaser') }}
       </p>
+
+      <NuxtLink
+        to="/contestants/2026"
+        class="inline-block bg-mpm-gold text-mpm-black px-8 py-3 font-bold rounded hover:bg-mpm-gold-light transition-all duration-200"
+      >
+        {{ $t('contestants_meet_btn') }}
+      </NuxtLink>
     </div>
   </main>
 </template>
@@ -26,9 +33,9 @@
 useHead({
   title: 'Mrs Philippines Montreal - 2026 Event',
   meta: [
-    { name: 'description', content: 'Mrs Philippines Montreal 2026 — coming September 26th. Candidates to be revealed soon.' },
+    { name: 'description', content: 'Mrs Philippines Montreal 2026 — coming September 19th. Meet the 2026 contestants.' },
     { property: 'og:title', content: 'Mrs Philippines Montreal 2026' },
-    { property: 'og:description', content: 'Coming September 26th, 2026. Candidates will be revealed soon.' },
+    { property: 'og:description', content: 'Coming September 19th, 2026. Meet the six remarkable contestants.' },
     { property: 'og:url', content: 'https://mrsphilippinesmontreal.web.app/events/2026' },
   ],
 })

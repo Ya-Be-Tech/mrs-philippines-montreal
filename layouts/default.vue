@@ -128,6 +128,7 @@ const onLocaleChange = (event) => {
 const navLinks = [
   { to: '/', label: 'home' },
   { to: '/about', label: 'about' },
-  { to: '/events', label: 'events' }
+  { to: '/events', label: 'events' },
+  { to: '/contestants/2026', label: 'contestants_nav' }
 ]
 </script>
