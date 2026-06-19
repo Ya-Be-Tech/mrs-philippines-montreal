@@ -129,6 +129,7 @@ const navLinks = [
   { to: '/', label: 'home' },
   { to: '/about', label: 'about' },
   { to: '/events', label: 'events' },
-  { to: '/contestants/2026', label: 'contestants_nav' }
+  { to: '/contestants/2026', label: 'contestants_nav' },
+  { to: '/contact', label: 'contact_nav' }
 ]
 </script>
