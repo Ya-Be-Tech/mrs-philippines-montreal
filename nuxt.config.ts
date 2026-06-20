@@ -39,9 +39,9 @@ export default defineNuxtConfig({
     prerender: {
       crawlLinks: true,
       routes: [
-        '/', '/about', '/talent', '/events', '/events/2019', '/events/2022', '/events/2026', '/contestants/2026',
-        '/fr/', '/fr/about', '/fr/talent', '/fr/events', '/fr/events/2019', '/fr/events/2022', '/fr/events/2026', '/fr/contestants/2026',
-        '/tl/', '/tl/about', '/tl/talent', '/tl/events', '/tl/events/2019', '/tl/events/2022', '/tl/events/2026', '/tl/contestants/2026',
+        '/', '/about', '/talent', '/events', '/events/2019', '/events/2022', '/events/2026', '/contestants/2026', '/contact',
+        '/fr/', '/fr/about', '/fr/talent', '/fr/events', '/fr/events/2019', '/fr/events/2022', '/fr/events/2026', '/fr/contestants/2026', '/fr/contact',
+        '/tl/', '/tl/about', '/tl/talent', '/tl/events', '/tl/events/2019', '/tl/events/2022', '/tl/events/2026', '/tl/contestants/2026', '/tl/contact',
       ],
     },
   },
